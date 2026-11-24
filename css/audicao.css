@@ -1,0 +1,27 @@
+.quadro-interativo {
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.botoes-alerta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.6rem 0;
+}
+
+.aviso-luminoso {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: var(--cor-cartao);
+  border: 1px solid var(--cor-borda-campo);
+  padding: 0.75rem;
+  font-size: 0.88rem;
+}
+
+.aviso-luminoso.piscando {
+  border-color: #d97706;
+}

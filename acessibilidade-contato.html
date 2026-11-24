@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Declaracao de acessibilidade segundo o modelo eMAG e formulario de contato acessivel.">
+  <title>Acessibilidade e Contato - TechAssistiva no Cotidiano</title>
+  <link rel="stylesheet" href="css/geral.css">
+  <link rel="stylesheet" href="css/acessibilidade-contato.css">
+</head>
+<body>
+  <header>
+    <div class="barra-topo">
+      <div class="container barra-topo-conteudo">
+        <nav aria-label="Atalhos de salto">
+          <ul class="links-salto">
+            <li><a href="#titulo-principal" accesskey="1">Ir para o conteudo <kbd>Alt+1</kbd></a></li>
+            <li><a href="#link-menu-inicio" accesskey="2">Ir para o menu <kbd>Alt+2</kbd></a></li>
+            <li><a href="#rodape-titulo" accesskey="3">Ir para o rodape <kbd>Alt+3</kbd></a></li>
+          </ul>
+        </nav>
+
+        <div class="ferramentas-acessibilidade" role="group" aria-label="Ferramentas de visualizacao e contraste">
+          <button type="button" id="botao-diminuir-fonte" class="botao-acessibilidade" aria-label="Diminuir tamanho da fonte">A-</button>
+          <button type="button" id="botao-resetar-fonte" class="botao-acessibilidade" aria-label="Tamanho original da fonte">A</button>
+          <button type="button" id="botao-aumentar-fonte" class="botao-acessibilidade" aria-label="Aumentar tamanho da fonte">A+</button>
+          <button type="button" id="botao-contraste" class="botao-acessibilidade" aria-pressed="false" accesskey="4">
+            Alto Contraste <span class="oculto-visualmente">(Atalho Alt+4)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cabecalho-site">
+      <div class="container cabecalho-conteudo">
+        <a href="index.html" class="link-marca">
+          <span class="texto-marca">
+            <span class="titulo-marca">TechAssistiva no Cotidiano</span>
+            <span class="subtitulo-marca">Artigos sobre acessibilidade na vida diaria</span>
+          </span>
+        </a>
+
+        <nav class="navegacao-principal" aria-label="Principal">
+          <ul>
+            <li><a href="index.html" id="link-menu-inicio">Inicio</a></li>
+            <li><a href="visao.html">Autonomia Visual</a></li>
+            <li><a href="audicao.html">Conexao Auditiva</a></li>
+            <li><a href="esporte-lazer.html">Esporte e Lazer</a></li>
+            <li><a href="acessibilidade-contato.html" aria-current="page">Acessibilidade e Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="barra-secundaria">
+      <div class="container barra-secundaria-conteudo">
+        <nav class="trilha-navegacao" aria-label="Trilha de localizacao">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><span aria-current="page">Acessibilidade e Contato</span></li>
+          </ol>
+        </nav>
+
+        <div class="barra-leitor">
+          <button type="button" id="botao-ouvir-pagina" class="botao-leitor" aria-pressed="false">
+            Ouvir texto da pagina
+          </button>
+          <button type="button" id="botao-parar-leitura" class="botao-leitor botao-leitor-parar" hidden>
+            Parar leitura
+          </button>
+          <span id="status-leitura" class="status-leitor" aria-live="polite">Leitor de voz pronto</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container">
+    <div id="artigo-leitura">
+      <section class="corpo-artigo secao-espacada" aria-labelledby="titulo-principal">
+        <h1 id="titulo-principal" tabindex="-1">Recursos de Acessibilidade do Site (eMAG) e Contato</h1>
+        <p class="texto-destaque">
+          Este site foi desenvolvido aplicando os conceitos estudados nos documentos eMAG Conteudista (Modulos 1 e 2) e nas diretrizes da WCAG.
+        </p>
+
+        <h2>Resumo das Recomendacoes Implementadas</h2>
+        <div class="area-tabela">
+          <table>
+            <caption>Lista de recursos de acessibilidade aplicados nas 5 paginas do projeto</caption>
+            <thead>
+              <tr>
+                <th scope="col">Item do eMAG</th>
+                <th scope="col">O que foi feito no site</th>
+                <th scope="col">Objetivo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">HTML Semantico</th>
+                <td>Uso correto das tags <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code> e titulos em ordem (<code>h1</code>, <code>h2</code>, <code>h3</code>).</td>
+                <td>Organizar a estrutura da pagina para leitores de tela.</td>
+              </tr>
+              <tr>
+                <th scope="row">Atalhos e Links de Salto</th>
+                <td>Barra superior com links diretos para o conteudo (<kbd>Alt+1</kbd>), menu (<kbd>Alt+2</kbd>), rodape (<kbd>Alt+3</kbd>) e alto contraste (<kbd>Alt+4</kbd>).</td>
+                <td>Facilitar a navegacao de quem usa apenas o teclado.</td>
+              </tr>
+              <tr>
+                <th scope="row">Alto Contraste e Fonte</th>
+                <td>Botoes <code>A-</code>, <code>A</code> e <code>A+</code> para ajustar o tamanho da letra e botao de Alto Contraste (fundo preto com texto branco e links amarelos).</td>
+                <td>Auxiliar a leitura por pessoas com baixa visao.</td>
+              </tr>
+              <tr>
+                <th scope="row">Imagens e Sons</th>
+                <td>Imagens com atributo <code>alt</code> e legenda <code>&lt;figcaption&gt;</code>; audio na pagina inicial acompanhado de transcricao em texto.</td>
+                <td>Garantir que pessoas cegas e pessoas surdas tenham acesso a todo o conteudo.</td>
+              </tr>
+              <tr>
+                <th scope="row">Traducao para Libras</th>
+                <td>Plugin VLibras adicionado nas 5 paginas do site.</td>
+                <td>Traduzir os textos para a Lingua Brasileira de Sinais.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="grade-conteudo">
+        <section class="cartao-formulario" aria-labelledby="form-titulo">
+          <h2 id="form-titulo">Formulario de Contato e Envio de Relato</h2>
+          <p>
+            Envie sua mensagem ou sugestao sobre acessibilidade no cotidiano. Os campos marcados com <span class="obrigatorio">*</span> sao obrigatorios.
+          </p>
+
+          <form id="form-contato" action="#form-contato" method="post">
+            <div class="campo">
+              <label for="nome">
+                Nome completo <span class="obrigatorio" aria-hidden="true">*</span>
+              </label>
+              <span id="nome-dica" class="dica-campo">Digite seu nome (minimo de 3 letras).</span>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                autocomplete="name"
+                required
+                minlength="3"
+                aria-describedby="nome-dica"
+                data-erro="nome-erro"
+              >
+              <span id="nome-erro" class="mensagem-erro">
+                Erro: Por favor, informe seu nome completo (minimo de 3 caracteres).
+              </span>
+            </div>
+
+            <div class="campo">
+              <label for="email">
+                E-mail <span class="obrigatorio" aria-hidden="true">*</span>
+              </label>
+              <span id="email-dica" class="dica-campo">Exemplo: aluno@email.com</span>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                autocorrect="off"
+                autocapitalize="none"
+                spellcheck="false"
+                required
+                aria-describedby="email-dica"
+                data-erro="email-erro"
+              >
+              <span id="email-erro" class="mensagem-erro">
+                Erro: Por favor, digite um endereco de e-mail valido.
+              </span>
+            </div>
+
+            <fieldset>
+              <legend>
+                Assunto principal da mensagem <span class="obrigatorio" aria-hidden="true">*</span>
+              </legend>
+
+              <div class="opcao-radio">
+                <input type="radio" id="tema-visao" name="tema" value="autonomia-visual" required>
+                <label for="tema-visao">Autonomia Visual (leitores de tela, Braille, mobilidade)</label>
+              </div>
+
+              <div class="opcao-radio">
+                <input type="radio" id="tema-audicao" name="tema" value="conexao-auditiva">
+                <label for="tema-audicao">Conexao Auditiva (Libras, legendas, alertas visuais)</label>
+              </div>
+
+              <div class="opcao-radio">
+                <input type="radio" id="tema-lazer" name="tema" value="esporte-lazer">
+                <label for="tema-lazer">Esporte, Lazer ou Jogos Adaptados</label>
+              </div>
+
+              <div class="opcao-radio">
+                <input type="radio" id="tema-web" name="tema" value="acessibilidade-web">
+                <label for="tema-web">Duvida ou sugestao sobre o site</label>
+              </div>
+            </fieldset>
+
+            <div class="campo">
+              <label for="mensagem">
+                Mensagem <span class="obrigatorio" aria-hidden="true">*</span>
+              </label>
+              <span id="mensagem-dica" class="dica-campo">Escreva seu relato ou sugestao (minimo de 15 caracteres).</span>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="5"
+                required
+                minlength="15"
+                aria-describedby="mensagem-dica"
+                data-erro="mensagem-erro"
+              ></textarea>
+              <span id="mensagem-erro" class="mensagem-erro">
+                Erro: Escreva uma mensagem com pelo menos 15 caracteres.
+              </span>
+            </div>
+
+            <div class="opcao-checkbox">
+              <input type="checkbox" id="autorizacao" name="autorizacao" value="sim">
+              <label for="autorizacao">Concordo em enviar este relato para fins educativos.</label>
+            </div>
+
+            <div class="acoes-formulario">
+              <button type="submit" class="botao">Enviar Mensagem</button>
+              <button type="reset" class="botao botao-secundario">Limpar Formulario</button>
+            </div>
+
+            <div id="retorno-envio" class="retorno-formulario" role="status" tabindex="-1"></div>
+          </form>
+        </section>
+
+        <aside aria-labelledby="lateral-formulario">
+          <div class="caixa-lateral">
+            <h2 id="lateral-formulario">Acessibilidade no Formulario</h2>
+            <ul>
+              <li>Todos os campos possuem a tag <code>&lt;label for="..."&gt;</code> associada ao <code>id</code> do campo.</li>
+              <li>Os botoes de opcao usam <code>&lt;fieldset&gt;</code> e <code>&lt;legend&gt;</code>.</li>
+              <li>As mensagens de erro sao associadas ao campo com <code>aria-describedby</code> e <code>aria-invalid</code>.</li>
+            </ul>
+          </div>
+
+          <div class="caixa-lateral">
+            <h3>Voltar para a Pagina Inicial</h3>
+            <p>Retorne para o inicio do site para rever o artigo principal e o player de audio.</p>
+            <p><a href="index.html" class="botao">Voltar ao Inicio</a></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape-site">
+    <div class="container">
+      <div class="grade-rodape">
+        <div>
+          <h2 id="rodape-titulo" tabindex="-1">TechAssistiva no Cotidiano</h2>
+          <p>
+            Trabalho de Desenvolvimento Web - Site com Acessibilidade baseado nas recomendacoes do eMAG (Modulos 1 e 2).
+          </p>
+        </div>
+
+        <nav aria-label="Mapa do site no rodape">
+          <h2>Paginas do Site</h2>
+          <ul>
+            <li><a href="index.html">1. Inicio</a></li>
+            <li><a href="visao.html">2. Autonomia Visual</a></li>
+            <li><a href="audicao.html">3. Conexao Auditiva</a></li>
+            <li><a href="esporte-lazer.html">4. Esporte e Lazer</a></li>
+            <li><a href="acessibilidade-contato.html" aria-current="page">5. Acessibilidade e Contato</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Atalhos de Teclado (eMAG)</h2>
+          <ul>
+            <li><strong>Alt + 1:</strong> Ir para o conteudo principal</li>
+            <li><strong>Alt + 2:</strong> Ir para o menu de navegacao</li>
+            <li><strong>Alt + 3:</strong> Ir para o rodape</li>
+            <li><strong>Alt + 4:</strong> Alternar modo de Alto Contraste</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rodape-inferior">
+        <span>2026 - TDE 02 Desenvolvimento Web - Site com Acessibilidade</span>
+        <span>Desenvolvido com HTML, CSS e JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script src="js/geral.js" defer></script>
+  <script src="js/acessibilidade-contato.js" defer></script>
+</body>
+</html>

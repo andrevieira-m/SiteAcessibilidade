@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Site sobre tecnologia assistiva e acessibilidade na vida cotidiana.">
+  <title>Inicio - TechAssistiva no Cotidiano</title>
+  <link rel="stylesheet" href="css/geral.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header>
+    <div class="barra-topo">
+      <div class="container barra-topo-conteudo">
+        <nav aria-label="Atalhos de salto">
+          <ul class="links-salto">
+            <li><a href="#titulo-principal" accesskey="1">Ir para o conteudo <kbd>Alt+1</kbd></a></li>
+            <li><a href="#link-menu-inicio" accesskey="2">Ir para o menu <kbd>Alt+2</kbd></a></li>
+            <li><a href="#rodape-titulo" accesskey="3">Ir para o rodape <kbd>Alt+3</kbd></a></li>
+          </ul>
+        </nav>
+
+        <div class="ferramentas-acessibilidade" role="group" aria-label="Ferramentas de visualizacao e contraste">
+          <button type="button" id="botao-diminuir-fonte" class="botao-acessibilidade" aria-label="Diminuir tamanho da fonte">A-</button>
+          <button type="button" id="botao-resetar-fonte" class="botao-acessibilidade" aria-label="Tamanho original da fonte">A</button>
+          <button type="button" id="botao-aumentar-fonte" class="botao-acessibilidade" aria-label="Aumentar tamanho da fonte">A+</button>
+          <button type="button" id="botao-contraste" class="botao-acessibilidade" aria-pressed="false" accesskey="4">
+            Alto Contraste <span class="oculto-visualmente">(Atalho Alt+4)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cabecalho-site">
+      <div class="container cabecalho-conteudo">
+        <a href="index.html" class="link-marca">
+          <span class="texto-marca">
+            <span class="titulo-marca">TechAssistiva no Cotidiano</span>
+            <span class="subtitulo-marca">Artigos sobre acessibilidade na vida diaria</span>
+          </span>
+        </a>
+
+        <nav class="navegacao-principal" aria-label="Principal">
+          <ul>
+            <li><a href="index.html" id="link-menu-inicio" aria-current="page">Inicio</a></li>
+            <li><a href="visao.html">Autonomia Visual</a></li>
+            <li><a href="audicao.html">Conexao Auditiva</a></li>
+            <li><a href="esporte-lazer.html">Esporte e Lazer</a></li>
+            <li><a href="acessibilidade-contato.html">Acessibilidade e Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="barra-secundaria">
+      <div class="container barra-secundaria-conteudo">
+        <nav class="trilha-navegacao" aria-label="Trilha de localizacao">
+          <ol>
+            <li><span aria-current="page">Inicio</span></li>
+          </ol>
+        </nav>
+
+        <div class="barra-leitor">
+          <button type="button" id="botao-ouvir-pagina" class="botao-leitor" aria-pressed="false">
+            Ouvir texto da pagina
+          </button>
+          <button type="button" id="botao-parar-leitura" class="botao-leitor botao-leitor-parar" hidden>
+            Parar leitura
+          </button>
+          <span id="status-leitura" class="status-leitor" aria-live="polite">Leitor de voz pronto</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container">
+    <div id="artigo-leitura">
+      <section class="banner-principal" aria-labelledby="titulo-principal">
+        <div>
+          <h1 id="titulo-principal" tabindex="-1">Como a Tecnologia Assistiva transforma a vida cotidiana</h1>
+          <p class="texto-destaque">
+            Para milhoes de pessoas, um leitor de tela no celular, um semaforo com sinal sonoro, uma legenda em tempo real ou uma lampada que pisca ao toque da campainha garantem a autonomia nas tarefas do dia a dia.
+          </p>
+          <p>
+            Segundo a Lei Brasileira de Inclusao (Lei n. 13.146/2015), tecnologia assistiva engloba produtos, equipamentos e recursos que promovem a funcionalidade e a participacao de pessoas com deficiencia ou mobilidade reduzida em atividades simples como estudar, trabalhar, fazer compras ou usar a internet.
+          </p>
+          <p>
+            <a href="visao.html" class="botao">Ver artigos sobre Autonomia Visual</a>
+          </p>
+        </div>
+
+        <figure>
+          <img
+            src="assets/img/inicio-tech-cotidiano.svg"
+            width="600"
+            height="340"
+            alt="Diagrama mostrando um celular com leitor de tela conectado a tres blocos: Casa Adaptada, Libras e Legenda, e Uso por Teclado."
+          >
+          <figcaption>
+            Figura 1: O celular funciona hoje como uma central de acessibilidade integrada ao cotidiano.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="caixa-audio" aria-labelledby="titulo-podcast">
+        <div class="cabecalho-audio">
+          <h2 id="titulo-podcast">Demonstracao Sonora e Relato do Cotidiano</h2>
+          <button type="button" id="botao-ler-depoimento" class="botao botao-secundario" aria-pressed="false">
+            Ouvir Depoimento Narrado
+          </button>
+        </div>
+
+        <p>
+          Ouca abaixo o arquivo de audio (14 segundos) com exemplos de sinais sonoros assistivos usados nas cidades e em computadores. Logo abaixo do player esta a transcricao em texto para pessoas surdas ou com deficiencia auditiva.
+        </p>
+
+        <audio
+          controls
+          preload="metadata"
+          src="assets/audio/relato-cotidiano-acessivel.wav"
+          aria-label="Demonstracao de sinais sonoros assistivos do cotidiano"
+          aria-details="transcricao-audio"
+        >
+          Seu navegador nao suporta o elemento de audio HTML5. Veja a transcricao abaixo.
+        </audio>
+
+        <details id="transcricao-audio" open>
+          <summary>Ver transcricao textual completa do audio</summary>
+          <div class="conteudo-transcricao">
+            <p class="trecho-transcricao" data-inicio="0" data-fim="4"><strong>[00:00 a 00:04 - Efeito sonoro]:</strong> Acorde musical inicial indicando a abertura do audio.</p>
+            <p class="trecho-transcricao" data-inicio="4" data-fim="8.5"><strong>[00:04 a 00:08 - Efeito sonoro]:</strong> Sinal sonoro intermitente de semaforo acessivel para pedestres, usado em faixas de travessia para orientar pessoas cegas.</p>
+            <p class="trecho-transcricao" data-inicio="8.5" data-fim="14.5"><strong>[00:08 a 00:14 - Efeito sonoro]:</strong> Sequencia de quatro notas ascendentes indicando confirmacao de leitura em um leitor de tela.</p>
+            <p id="texto-depoimento">
+              <strong>[Depoimento - Marina, estudante universitaria com baixa visao]:</strong>
+              "Ola! Eu sou a Marina, tenho baixa visao e uso tecnologia assistiva todos os dias. Pela manha, meu celular anuncia a previsao do tempo com o leitor de tela. No supermercado, uso a camera do smartphone para ler codigos de barras e a validade dos produtos. E quando estudo na web, sites que seguem o modelo eMAG, com alto contraste, descricao nas imagens e navegacao por teclado, garantem a minha autonomia."
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="grade-conteudo">
+        <article class="corpo-artigo" aria-labelledby="artigo-capa-titulo">
+          <h2 id="artigo-capa-titulo">Do Despertador ao Transporte Publico: Barreiras do Dia a Dia</h2>
+          <p>
+            Quando falamos em acessibilidade, muita gente pensa apenas em rampas ou elevadores. Apesar de a parte fisica ser muito importante, a rotina moderna depende tambem de informacao visual, sonora e digital a todo momento.
+          </p>
+          <p>
+            Por exemplo: acordar cedo sem ouvir o despertador comum, tentar identificar qual onibus esta chegando no ponto quando o letreiro tem baixo contraste, ou tentar pagar uma conta em um site cujos botoes nao possuem descricao para leitores de tela como o NVDA ou o TalkBack.
+          </p>
+
+          <h3>Principais Tipos de Acessibilidade na Rotina</h3>
+          <ol>
+            <li>
+              <strong>Acessibilidade Instrumental:</strong> Aparelhos como lupas eletronicas, teclados adaptados, acionadores e aplicativos de leitura por camera.
+            </li>
+            <li>
+              <strong>Acessibilidade Comunicacional:</strong> Uso da Lingua Brasileira de Sinais (<abbr title="Lingua Brasileira de Sinais">Libras</abbr>), legendas, audiodescricao e escrita em Braille.
+            </li>
+            <li>
+              <strong>Acessibilidade Digital (eMAG e <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>):</strong> Sites e sistemas feitos para funcionar pelo teclado e com leitores de tela.
+            </li>
+            <li>
+              <strong>Acessibilidade Atitudinal:</strong> Respeito e inclusao no convivio diario, sem preconceitos.
+            </li>
+          </ol>
+
+          <div class="caixa-destaque">
+            <h3>Como o Desenho Universal ajuda todo mundo</h3>
+            <p>
+              Muitos recursos criados para acessibilidade acabam ajudando qualquer pessoa no cotidiano: legendas em videos ajudam quem esta em ambientes barulhentos, comandos de voz ajudam quem esta com as maos ocupadas e o alto contraste facilita a leitura da tela sob o sol.
+            </p>
+          </div>
+        </article>
+
+        <aside aria-labelledby="lateral-destaques">
+          <div class="caixa-lateral">
+            <h2 id="lateral-destaques">Paginas do Site</h2>
+            <p>Navegue pelas 5 paginas do trabalho:</p>
+            <ul>
+              <li><a href="index.html">1. Inicio (Panorama Geral)</a></li>
+              <li><a href="visao.html">2. Autonomia Visual</a></li>
+              <li><a href="audicao.html">3. Conexao Auditiva</a></li>
+              <li><a href="esporte-lazer.html">4. Esporte e Lazer</a></li>
+              <li><a href="acessibilidade-contato.html">5. Acessibilidade e Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="caixa-lateral">
+            <h3>Navegacao por Teclado</h3>
+            <p>
+              Voce pode navegar por todo o site usando a tecla <kbd>Tab</kbd>. Use tambem o atalho <kbd>Alt + 4</kbd> para ligar ou desligar o Alto Contraste.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <section aria-labelledby="explorar-secoes">
+        <h2 id="explorar-secoes">Temas Abordados nas Proximas Paginas</h2>
+        <ul class="grade-cartoes" role="list">
+          <li class="cartao">
+            <div>
+              <h3>Autonomia Visual nas Compras e nas Ruas</h3>
+              <p>Como etiquetas acessiveis, leitores de tela e pisos tateis ajudam a identificar produtos, remedios e trajetos urbanos.</p>
+            </div>
+            <a href="visao.html" class="botao">Acessar pagina Autonomia Visual</a>
+          </li>
+
+          <li class="cartao">
+            <div>
+              <h3>Conexao Auditiva: Alertas Visuais e Libras</h3>
+              <p>Como funcionam os despertadores vibratorios, campainhas com alerta luminoso, legendas ao vivo e tradutores de Libras.</p>
+            </div>
+            <a href="audicao.html" class="botao">Acessar pagina Conexao Auditiva</a>
+          </li>
+
+          <li class="cartao">
+            <div>
+              <h3>Esporte, Lazer e Jogos Adaptados</h3>
+              <p>O uso de controles adaptados com botoes grandes, audiodescricao no cinema e automacao residencial por comando de voz.</p>
+            </div>
+            <a href="esporte-lazer.html" class="botao">Acessar pagina Esporte e Lazer</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape-site">
+    <div class="container">
+      <div class="grade-rodape">
+        <div>
+          <h2 id="rodape-titulo" tabindex="-1">TechAssistiva no Cotidiano</h2>
+          <p>
+            Trabalho de Desenvolvimento Web - Site com Acessibilidade baseado nas recomendacoes do eMAG (Modulos 1 e 2).
+          </p>
+        </div>
+
+        <nav aria-label="Mapa do site no rodape">
+          <h2>Paginas do Site</h2>
+          <ul>
+            <li><a href="index.html" aria-current="page">1. Inicio</a></li>
+            <li><a href="visao.html">2. Autonomia Visual</a></li>
+            <li><a href="audicao.html">3. Conexao Auditiva</a></li>
+            <li><a href="esporte-lazer.html">4. Esporte e Lazer</a></li>
+            <li><a href="acessibilidade-contato.html">5. Acessibilidade e Contato</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Atalhos de Teclado (eMAG)</h2>
+          <ul>
+            <li><strong>Alt + 1:</strong> Ir para o conteudo principal</li>
+            <li><strong>Alt + 2:</strong> Ir para o menu de navegacao</li>
+            <li><strong>Alt + 3:</strong> Ir para o rodape</li>
+            <li><strong>Alt + 4:</strong> Alternar modo de Alto Contraste</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rodape-inferior">
+        <span>2026 - TDE 02 Desenvolvimento Web - Site com Acessibilidade</span>
+        <span>Desenvolvido com HTML, CSS e JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script src="js/geral.js" defer></script>
+  <script src="js/index.js" defer></script>
+</body>
+</html>

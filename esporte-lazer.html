@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Artigos sobre acessibilidade no lazer, esportes, videogames adaptados e automacao residencial.">
+  <title>Esporte e Lazer - TechAssistiva no Cotidiano</title>
+  <link rel="stylesheet" href="css/geral.css">
+  <link rel="stylesheet" href="css/esporte-lazer.css">
+</head>
+<body>
+  <header>
+    <div class="barra-topo">
+      <div class="container barra-topo-conteudo">
+        <nav aria-label="Atalhos de salto">
+          <ul class="links-salto">
+            <li><a href="#titulo-principal" accesskey="1">Ir para o conteudo <kbd>Alt+1</kbd></a></li>
+            <li><a href="#link-menu-inicio" accesskey="2">Ir para o menu <kbd>Alt+2</kbd></a></li>
+            <li><a href="#rodape-titulo" accesskey="3">Ir para o rodape <kbd>Alt+3</kbd></a></li>
+          </ul>
+        </nav>
+
+        <div class="ferramentas-acessibilidade" role="group" aria-label="Ferramentas de visualizacao e contraste">
+          <button type="button" id="botao-diminuir-fonte" class="botao-acessibilidade" aria-label="Diminuir tamanho da fonte">A-</button>
+          <button type="button" id="botao-resetar-fonte" class="botao-acessibilidade" aria-label="Tamanho original da fonte">A</button>
+          <button type="button" id="botao-aumentar-fonte" class="botao-acessibilidade" aria-label="Aumentar tamanho da fonte">A+</button>
+          <button type="button" id="botao-contraste" class="botao-acessibilidade" aria-pressed="false" accesskey="4">
+            Alto Contraste <span class="oculto-visualmente">(Atalho Alt+4)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cabecalho-site">
+      <div class="container cabecalho-conteudo">
+        <a href="index.html" class="link-marca">
+          <span class="texto-marca">
+            <span class="titulo-marca">TechAssistiva no Cotidiano</span>
+            <span class="subtitulo-marca">Artigos sobre acessibilidade na vida diaria</span>
+          </span>
+        </a>
+
+        <nav class="navegacao-principal" aria-label="Principal">
+          <ul>
+            <li><a href="index.html" id="link-menu-inicio">Inicio</a></li>
+            <li><a href="visao.html">Autonomia Visual</a></li>
+            <li><a href="audicao.html">Conexao Auditiva</a></li>
+            <li><a href="esporte-lazer.html" aria-current="page">Esporte e Lazer</a></li>
+            <li><a href="acessibilidade-contato.html">Acessibilidade e Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="barra-secundaria">
+      <div class="container barra-secundaria-conteudo">
+        <nav class="trilha-navegacao" aria-label="Trilha de localizacao">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><span aria-current="page">Esporte e Lazer</span></li>
+          </ol>
+        </nav>
+
+        <div class="barra-leitor">
+          <button type="button" id="botao-ouvir-pagina" class="botao-leitor" aria-pressed="false">
+            Ouvir texto da pagina
+          </button>
+          <button type="button" id="botao-parar-leitura" class="botao-leitor botao-leitor-parar" hidden>
+            Parar leitura
+          </button>
+          <span id="status-leitura" class="status-leitor" aria-live="polite">Leitor de voz pronto</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container">
+    <div id="artigo-leitura">
+      <section class="banner-principal" aria-labelledby="titulo-principal">
+        <div>
+          <h1 id="titulo-principal" tabindex="-1">Acessibilidade no Lazer: Videogames Adaptados, Cultura e Casa Conectada</h1>
+          <p class="texto-destaque">
+            A acessibilidade na vida cotidiana tambem inclui momentos de lazer, cultura, esporte e diversao dentro e fora de casa.
+          </p>
+          <p>
+            Controles de videogame adaptados, audiodescricao em filmes e automacao residencial por comando de voz permitem que pessoas com deficiencia motora ou sensorial participem dessas atividades com independencia.
+          </p>
+        </div>
+
+        <figure>
+          <img
+            src="assets/img/controle-adaptado-lazer.svg"
+            width="600"
+            height="320"
+            alt="Diagrama de um controle de videogame adaptado com dois botoes quadrados grandes A e B e um direcional em formato de cruz."
+          >
+          <figcaption>
+            Figura 1: Controles adaptados usam botoes maiores e permitem ligar acionadores externos.
+          </figcaption>
+        </figure>
+      </section>
+
+      <div class="grade-conteudo">
+        <article class="corpo-artigo" aria-labelledby="artigo-lazer-titulo">
+          <h2 id="artigo-lazer-titulo">Videogames Adaptados e Navegacao sem Mouse</h2>
+          <p>
+            Um controle comum de videogame exige movimentos rapidos com as duas maos ao mesmo tempo. Para pessoas com limitacoes motoras, isso pode impedir a pratica do jogo.
+          </p>
+
+          <h3>1. Como Funcionam os Controles Adaptados e Acionadores</h3>
+          <ul>
+            <li><strong>Botoes grandes e sensiveis:</strong> Podem ser acionados com a palma da mao, o braco, o queixo ou os pes sem exigir forca.</li>
+            <li><strong>Acionadores (Switches) no computador e na web:</strong> Esses mesmos botoes podem ser conectados ao computador para simular as teclas <kbd>Tab</kbd> e <kbd>Enter</kbd>. Por isso o eMAG exige que todo site funcione 100% pelo teclado, sem depender do mouse.</li>
+          </ul>
+
+          <h3>2. Automacao Residencial no Dia a Dia</h3>
+          <p>
+            Tomadas inteligentes, lampadas conectadas e assistentes de voz permitem ligar o ventilador, acender a luz do quarto ou mudar o canal da televisao apenas falando um comando de voz, trazendo mais autonomia para pessoas com mobilidade reduzida.
+          </p>
+
+          <h2>Tabela: Recursos de Acessibilidade no Lazer e Esporte</h2>
+          <div class="area-tabela">
+            <table>
+              <caption>Exemplos de recursos assistivos usados em atividades culturais e esportivas</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Atividade</th>
+                  <th scope="col">Recurso Assistivo</th>
+                  <th scope="col">Como Funciona</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Cinema e Televisao</th>
+                  <td>Audiodescricao (<abbr title="Audiodescricao">AD</abbr>)</td>
+                  <td>Uma faixa de audio narra as cenas, expressoes e acoes que acontecem sem fala para pessoas cegas.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Museus e Exposicoes</th>
+                  <td>Maquetes Tateis e Guias em Libras</td>
+                  <td>Replicas que podem ser tocadas pelos visitantes junto com explicacao em audio e video em Libras.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Praias Acessiveis</th>
+                  <td>Cadeira Anfibia e Esteiras</td>
+                  <td>Cadeiras com rodas proprias para areia e agua que permitem o banho de mar com seguranca.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Corrida e Ciclismo</th>
+                  <td>Handbikes e Bicicletas Duplas (Tandem)</td>
+                  <td>Bicicletas pedaladas com as maos ou conduzidas em dupla com um guia.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <aside aria-labelledby="lateral-teclado">
+          <div class="caixa-lateral">
+            <h2 id="lateral-teclado">Teste de Botoes Acionadores</h2>
+            <p>
+              No eMAG e na WCAG, botoes muito pequenos dificultam o clique para quem tem limitacao motora.
+            </p>
+
+            <div class="quadro-interativo">
+              <h3>Simulador de Acionadores (A e B)</h3>
+              <p>Use a tecla <kbd>Tab</kbd> + <kbd>Espaco</kbd> ou clique nos botoes abaixo:</p>
+              <div class="grade-acionadores" role="group" aria-label="Simulador de botoes acionadores adaptados">
+                <button type="button" id="botao-acionador-a" class="botao-acionador" aria-pressed="false">
+                  <span>ACIONADOR A</span>
+                  <small>Casa Conectada</small>
+                </button>
+                <button type="button" id="botao-acionador-b" class="botao-acionador" aria-pressed="false">
+                  <span>ACIONADOR B</span>
+                  <small>Jogo e Audio</small>
+                </button>
+              </div>
+              <div id="texto-status-acionador" class="caixa-status-acionador" role="status">
+                Selecione o Acionador A ou Acionador B para testar.
+              </div>
+            </div>
+          </div>
+
+          <div class="caixa-lateral">
+            <h3>Ultima Pagina</h3>
+            <p>Acesse a quinta pagina para ver o resumo das regras do eMAG usadas neste site e o formulario de contato acessivel.</p>
+            <p><a href="acessibilidade-contato.html" class="botao">Ir para Acessibilidade e Contato</a></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape-site">
+    <div class="container">
+      <div class="grade-rodape">
+        <div>
+          <h2 id="rodape-titulo" tabindex="-1">TechAssistiva no Cotidiano</h2>
+          <p>
+            Trabalho de Desenvolvimento Web - Site com Acessibilidade baseado nas recomendacoes do eMAG (Modulos 1 e 2).
+          </p>
+        </div>
+
+        <nav aria-label="Mapa do site no rodape">
+          <h2>Paginas do Site</h2>
+          <ul>
+            <li><a href="index.html">1. Inicio</a></li>
+            <li><a href="visao.html">2. Autonomia Visual</a></li>
+            <li><a href="audicao.html">3. Conexao Auditiva</a></li>
+            <li><a href="esporte-lazer.html" aria-current="page">4. Esporte e Lazer</a></li>
+            <li><a href="acessibilidade-contato.html">5. Acessibilidade e Contato</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Atalhos de Teclado (eMAG)</h2>
+          <ul>
+            <li><strong>Alt + 1:</strong> Ir para o conteudo principal</li>
+            <li><strong>Alt + 2:</strong> Ir para o menu de navegacao</li>
+            <li><strong>Alt + 3:</strong> Ir para o rodape</li>
+            <li><strong>Alt + 4:</strong> Alternar modo de Alto Contraste</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rodape-inferior">
+        <span>2026 - TDE 02 Desenvolvimento Web - Site com Acessibilidade</span>
+        <span>Desenvolvido com HTML, CSS e JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script src="js/geral.js" defer></script>
+  <script src="js/esporte-lazer.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Artigos sobre acessibilidade auditiva no cotidiano: campainhas luminosas, despertadores vibratorios, legendas e Libras.">
+  <title>Conexao Auditiva - TechAssistiva no Cotidiano</title>
+  <link rel="stylesheet" href="css/geral.css">
+  <link rel="stylesheet" href="css/audicao.css">
+</head>
+<body>
+  <header>
+    <div class="barra-topo">
+      <div class="container barra-topo-conteudo">
+        <nav aria-label="Atalhos de salto">
+          <ul class="links-salto">
+            <li><a href="#titulo-principal" accesskey="1">Ir para o conteudo <kbd>Alt+1</kbd></a></li>
+            <li><a href="#link-menu-inicio" accesskey="2">Ir para o menu <kbd>Alt+2</kbd></a></li>
+            <li><a href="#rodape-titulo" accesskey="3">Ir para o rodape <kbd>Alt+3</kbd></a></li>
+          </ul>
+        </nav>
+
+        <div class="ferramentas-acessibilidade" role="group" aria-label="Ferramentas de visualizacao e contraste">
+          <button type="button" id="botao-diminuir-fonte" class="botao-acessibilidade" aria-label="Diminuir tamanho da fonte">A-</button>
+          <button type="button" id="botao-resetar-fonte" class="botao-acessibilidade" aria-label="Tamanho original da fonte">A</button>
+          <button type="button" id="botao-aumentar-fonte" class="botao-acessibilidade" aria-label="Aumentar tamanho da fonte">A+</button>
+          <button type="button" id="botao-contraste" class="botao-acessibilidade" aria-pressed="false" accesskey="4">
+            Alto Contraste <span class="oculto-visualmente">(Atalho Alt+4)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cabecalho-site">
+      <div class="container cabecalho-conteudo">
+        <a href="index.html" class="link-marca">
+          <span class="texto-marca">
+            <span class="titulo-marca">TechAssistiva no Cotidiano</span>
+            <span class="subtitulo-marca">Artigos sobre acessibilidade na vida diaria</span>
+          </span>
+        </a>
+
+        <nav class="navegacao-principal" aria-label="Principal">
+          <ul>
+            <li><a href="index.html" id="link-menu-inicio">Inicio</a></li>
+            <li><a href="visao.html">Autonomia Visual</a></li>
+            <li><a href="audicao.html" aria-current="page">Conexao Auditiva</a></li>
+            <li><a href="esporte-lazer.html">Esporte e Lazer</a></li>
+            <li><a href="acessibilidade-contato.html">Acessibilidade e Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="barra-secundaria">
+      <div class="container barra-secundaria-conteudo">
+        <nav class="trilha-navegacao" aria-label="Trilha de localizacao">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><span aria-current="page">Conexao Auditiva</span></li>
+          </ol>
+        </nav>
+
+        <div class="barra-leitor">
+          <button type="button" id="botao-ouvir-pagina" class="botao-leitor" aria-pressed="false">
+            Ouvir texto da pagina
+          </button>
+          <button type="button" id="botao-parar-leitura" class="botao-leitor botao-leitor-parar" hidden>
+            Parar leitura
+          </button>
+          <span id="status-leitura" class="status-leitor" aria-live="polite">Leitor de voz pronto</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container">
+    <div id="artigo-leitura">
+      <section class="banner-principal" aria-labelledby="titulo-principal">
+        <div>
+          <h1 id="titulo-principal" tabindex="-1">Conexao Auditiva: Sinais Luminosos, Vibracao e Libras no Dia a Dia</h1>
+          <p class="texto-destaque">
+            Muitos avisos importantes da rotina foram pensados apenas para quem ouve: o toque do interfone, o despertador de manha ou a chamada de senha em um consultorio medico.
+          </p>
+          <p>
+            A tecnologia assistiva voltada para pessoas surdas ou com deficiencia auditiva transforma esses avisos sonoros em alertas luminosos, vibracao tatil e traducao para Libras ou texto.
+          </p>
+        </div>
+
+        <figure>
+          <img
+            src="assets/img/conexao-auditiva-casa.svg"
+            width="600"
+            height="320"
+            alt="Diagrama com tres blocos sobre acessibilidade auditiva: Luz de Alerta que pisca ao tocar a campainha, Alarme Vibratorio as 7 horas no pulso, e Texto e Libras com transcricao em tempo real."
+          >
+          <figcaption>
+            Figura 1: Substituicao de avisos apenas sonoros por sinais visuais e vibratorios na rotina.
+          </figcaption>
+        </figure>
+      </section>
+
+      <div class="grade-conteudo">
+        <article class="corpo-artigo" aria-labelledby="artigo-auditivo-titulo">
+          <h2 id="artigo-auditivo-titulo">Alertas Visuais e Reconhecimento de Sons em Casa</h2>
+          <p>
+            Antigamente, adaptar uma casa com campainhas luminosas exigia mudar toda a instalacao eletrica. Hoje, lampadas inteligentes e a funcao de Reconhecimento de Sons presente nos celulares ajudam a resolver isso de forma acessivel.
+          </p>
+
+          <h3>1. Avisos Luminosos e Vibratorios na Rotina</h3>
+          <ul>
+            <li><strong>Campainha e interfone com alerta de luz:</strong> Quando alguem toca a campainha, as lampadas da sala piscam ou o celular emite um flash de LED junto com vibracao.</li>
+            <li><strong>Despertadores vibratorios:</strong> Relogios inteligentes (smartwatches) ou dispositivos colocados embaixo do travesseiro vibram no horario programado para acordar a pessoa sem depender de som.</li>
+            <li><strong>Sensores de seguranca:</strong> O celular pode detectar barulhos como choro de bebe, alarme de incendio ou torneira aberta e enviar um aviso visual imediato na tela.</li>
+          </ul>
+
+          <h3>2. A Importancia da Libras e das Legendas</h3>
+          <p>
+            Para grande parte das pessoas surdas no Brasil, a <strong>Lingua Brasileira de Sinais (<abbr title="Lingua Brasileira de Sinais">Libras</abbr>)</strong>, reconhecida pela Lei n. 10.436/2002, e a primeira lingua, enquanto o portugues escrito e a segunda lingua.
+          </p>
+          <p>
+            Por isso, o modelo eMAG destaca duas recomendacoes fundamentais para sites e conteudos do cotidiano:
+          </p>
+          <ol>
+            <li><strong>Traducao para Libras:</strong> Uso de interpretes ou ferramentas como o VLibras para traduzir textos da pagina para a Lingua Brasileira de Sinais.</li>
+            <li><strong>Legendas e Transcricoes:</strong> Todo conteudo em audio ou video deve ter legenda sincronizada ou transcricao em texto, indicando tambem os sons importantes do ambiente.</li>
+          </ol>
+
+          <div class="caixa-destaque">
+            <h3>Barreiras em Hospitais e Atendimento Publico</h3>
+            <p>
+              Uma dificuldade muito comum fora de casa acontece quando clinicas ou orgaos publicos chamam o nome do paciente apenas pelo microfone. A solucao recomendada e sempre utilizar paineis eletronicos visuais com o numero da senha e o local de atendimento.
+            </p>
+          </div>
+        </article>
+
+        <aside aria-labelledby="lateral-dica-vlibras">
+          <div class="caixa-lateral">
+            <h2 id="lateral-dica-vlibras">Tradutor VLibras e Simulador</h2>
+            <p>
+              Voce pode clicar no botao azul do <strong>VLibras</strong> na lateral direita da tela para traduzir os textos desta pagina para Libras.
+            </p>
+
+            <div class="quadro-interativo">
+              <h3>Simulador de Alerta Visual</h3>
+              <p>Clique nos botoes para ver como um aviso sonoro vira um alerta visual:</p>
+              <div class="botoes-alerta" role="group" aria-label="Testar tipos de alertas visuais">
+                <button type="button" class="botao-acessibilidade" data-tipo-alerta="campainha" aria-pressed="true">Campainha</button>
+                <button type="button" class="botao-acessibilidade" data-tipo-alerta="despertador" aria-pressed="false">Alarme 07:00</button>
+                <button type="button" class="botao-acessibilidade" data-tipo-alerta="chamada" aria-pressed="false">Painel Hospital</button>
+              </div>
+              <div id="caixa-alerta-visual" class="aviso-luminoso piscando" role="status">
+                <span id="texto-alerta-visual">[LUZ PISCANDO + VIBRACAO]: Campainha da porta principal acionada.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="caixa-lateral">
+            <h3>Proxima Pagina</h3>
+            <p>Conheca na proxima pagina como controles adaptados e comandos de voz garantem acessibilidade no lazer e nos esportes.</p>
+            <p><a href="esporte-lazer.html" class="botao">Ir para Esporte e Lazer</a></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape-site">
+    <div class="container">
+      <div class="grade-rodape">
+        <div>
+          <h2 id="rodape-titulo" tabindex="-1">TechAssistiva no Cotidiano</h2>
+          <p>
+            Trabalho de Desenvolvimento Web - Site com Acessibilidade baseado nas recomendacoes do eMAG (Modulos 1 e 2).
+          </p>
+        </div>
+
+        <nav aria-label="Mapa do site no rodape">
+          <h2>Paginas do Site</h2>
+          <ul>
+            <li><a href="index.html">1. Inicio</a></li>
+            <li><a href="visao.html">2. Autonomia Visual</a></li>
+            <li><a href="audicao.html" aria-current="page">3. Conexao Auditiva</a></li>
+            <li><a href="esporte-lazer.html">4. Esporte e Lazer</a></li>
+            <li><a href="acessibilidade-contato.html">5. Acessibilidade e Contato</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Atalhos de Teclado (eMAG)</h2>
+          <ul>
+            <li><strong>Alt + 1:</strong> Ir para o conteudo principal</li>
+            <li><strong>Alt + 2:</strong> Ir para o menu de navegacao</li>
+            <li><strong>Alt + 3:</strong> Ir para o rodape</li>
+            <li><strong>Alt + 4:</strong> Alternar modo de Alto Contraste</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rodape-inferior">
+        <span>2026 - TDE 02 Desenvolvimento Web - Site com Acessibilidade</span>
+        <span>Desenvolvido com HTML, CSS e JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script src="js/geral.js" defer></script>
+  <script src="js/audicao.js" defer></script>
+</body>
+</html>

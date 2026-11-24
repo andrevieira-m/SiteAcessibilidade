@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Artigos sobre leitores de tela, Braille, compras e mobilidade urbana para pessoas com deficiencia visual.">
+  <title>Autonomia Visual - TechAssistiva no Cotidiano</title>
+  <link rel="stylesheet" href="css/geral.css">
+  <link rel="stylesheet" href="css/visao.css">
+</head>
+<body>
+  <header>
+    <div class="barra-topo">
+      <div class="container barra-topo-conteudo">
+        <nav aria-label="Atalhos de salto">
+          <ul class="links-salto">
+            <li><a href="#titulo-principal" accesskey="1">Ir para o conteudo <kbd>Alt+1</kbd></a></li>
+            <li><a href="#link-menu-inicio" accesskey="2">Ir para o menu <kbd>Alt+2</kbd></a></li>
+            <li><a href="#rodape-titulo" accesskey="3">Ir para o rodape <kbd>Alt+3</kbd></a></li>
+          </ul>
+        </nav>
+
+        <div class="ferramentas-acessibilidade" role="group" aria-label="Ferramentas de visualizacao e contraste">
+          <button type="button" id="botao-diminuir-fonte" class="botao-acessibilidade" aria-label="Diminuir tamanho da fonte">A-</button>
+          <button type="button" id="botao-resetar-fonte" class="botao-acessibilidade" aria-label="Tamanho original da fonte">A</button>
+          <button type="button" id="botao-aumentar-fonte" class="botao-acessibilidade" aria-label="Aumentar tamanho da fonte">A+</button>
+          <button type="button" id="botao-contraste" class="botao-acessibilidade" aria-pressed="false" accesskey="4">
+            Alto Contraste <span class="oculto-visualmente">(Atalho Alt+4)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cabecalho-site">
+      <div class="container cabecalho-conteudo">
+        <a href="index.html" class="link-marca">
+          <span class="texto-marca">
+            <span class="titulo-marca">TechAssistiva no Cotidiano</span>
+            <span class="subtitulo-marca">Artigos sobre acessibilidade na vida diaria</span>
+          </span>
+        </a>
+
+        <nav class="navegacao-principal" aria-label="Principal">
+          <ul>
+            <li><a href="index.html" id="link-menu-inicio">Inicio</a></li>
+            <li><a href="visao.html" aria-current="page">Autonomia Visual</a></li>
+            <li><a href="audicao.html">Conexao Auditiva</a></li>
+            <li><a href="esporte-lazer.html">Esporte e Lazer</a></li>
+            <li><a href="acessibilidade-contato.html">Acessibilidade e Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="barra-secundaria">
+      <div class="container barra-secundaria-conteudo">
+        <nav class="trilha-navegacao" aria-label="Trilha de localizacao">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><span aria-current="page">Autonomia Visual</span></li>
+          </ol>
+        </nav>
+
+        <div class="barra-leitor">
+          <button type="button" id="botao-ouvir-pagina" class="botao-leitor" aria-pressed="false">
+            Ouvir texto da pagina
+          </button>
+          <button type="button" id="botao-parar-leitura" class="botao-leitor botao-leitor-parar" hidden>
+            Parar leitura
+          </button>
+          <span id="status-leitura" class="status-leitor" aria-live="polite">Leitor de voz pronto</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container">
+    <div id="artigo-leitura">
+      <section class="banner-principal" aria-labelledby="titulo-principal">
+        <div>
+          <h1 id="titulo-principal" tabindex="-1">Autonomia Visual: Das Compras no Supermercado a Mobilidade Urbana</h1>
+          <p class="texto-destaque">
+            Como uma pessoa cega diferencia duas embalagens parecidas no mercado, confere a validade de um remedio ou navega por um site de noticias?
+          </p>
+          <p>
+            No dia a dia, o sistema Braille, as etiquetas de alto contraste e os leitores de tela no celular ajudam a converter informacoes visuais em audio.
+          </p>
+        </div>
+
+        <figure>
+          <img
+            src="assets/img/autonomia-visual-app.svg"
+            width="600"
+            height="320"
+            alt="Diagrama de uma embalagem de leite de 1 litro com escrita em Braille e codigo QR colorido sendo lida por um celular que anuncia a validade para 15 de dezembro."
+          >
+          <figcaption>
+            Figura 1: Aplicativos de leitura por camera ajudam a identificar embalagens e datas de validade.
+          </figcaption>
+        </figure>
+      </section>
+
+      <div class="grade-conteudo">
+        <article class="corpo-artigo" aria-labelledby="subtitulo-rotina-visual">
+          <h2 id="subtitulo-rotina-visual">Leitores de Tela e Aplicativos na Rotina</h2>
+          <p>
+            Para pessoas cegas ou com baixa visao, o uso do celular e do computador acontece com o apoio de leitores de tela como o TalkBack (Android), o VoiceOver (iOS) e o NVDA (Windows). Esses programas leem em voz alta os titulos, links, botoes e textos alternativos das imagens.
+          </p>
+
+          <h3>1. No Supermercado e na Farmacia</h3>
+          <p>
+            Muitas embalagens tem o mesmo formato fisico, como caixas de leite ou latas de alimentos. Para resolver isso no cotidiano, sao utilizados tres recursos principais:
+          </p>
+          <ul>
+            <li><strong>Leitura de texto por camera (<abbr title="Optical Character Recognition">OCR</abbr>):</strong> O usuario aponta a camera do celular para um rotulo, bula ou cardapio e o aplicativo le o texto impresso em voz alta.</li>
+            <li><strong>Etiquetas e QR Codes acessiveis:</strong> Codigos coloridos de alto contraste nas embalagens permitem que o celular identifique o produto mesmo a distancia.</li>
+            <li><strong>Escrita em Braille nas caixas de medicamentos:</strong> Exigida por regulamentacao para permitir que a pessoa identifique o nome do remedio pelo tato.</li>
+          </ul>
+
+          <h3>2. Mobilidade nas Calcadas e Semaforos</h3>
+          <p>
+            Nas ruas, o piso tatil direcional e o piso tatil de alerta orientam o caminhar com a bengala. Nos cruzamentos movimentados, o semaforo sonoro emite bipes que indicam quando e seguro atravessar a faixa de pedestres.
+          </p>
+
+          <h2>Tabela Comparativa: Tarefas do Dia a Dia e Solucoes</h2>
+          <div class="area-tabela">
+            <table>
+              <caption>Comparacao entre dificuldades visuais do cotidiano e tecnologias assistivas</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Atividade</th>
+                  <th scope="col">Dificuldade sem Acessibilidade</th>
+                  <th scope="col">Solucao Assistiva</th>
+                  <th scope="col">Recomendacao eMAG</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Usar eletrodomesticos</th>
+                  <td>Paineis digitais lisos sem botoes fisicos ou aviso sonoro.</td>
+                  <td>Marcacoes tateis em relevo nos botoes principais e retorno por bip ou voz.</td>
+                  <td>Desenho Universal</td>
+                </tr>
+                <tr>
+                  <th scope="row">Compras pela internet</th>
+                  <td>Imagens de produtos sem atributo <code>alt</code> (exemplo: "foto1.jpg").</td>
+                  <td>Descricao clara no atributo <code>alt</code> informando o produto, cor e detalhes.</td>
+                  <td>eMAG - Marcacao de Imagens</td>
+                </tr>
+                <tr>
+                  <th scope="row">Leitura com baixa visao</th>
+                  <td>Letras pequenas e cores claras com pouco contraste no fundo branco.</td>
+                  <td>Botoes para aumentar a fonte (A+) e modo de Alto Contraste.</td>
+                  <td>eMAG - Contraste e Fonte</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <aside aria-labelledby="lateral-boas-praticas-alt">
+          <div class="caixa-lateral">
+            <h2 id="lateral-boas-praticas-alt">Como Descrever Imagens (eMAG)</h2>
+            <p>
+              Segundo a cartilha do eMAG Conteudista, toda imagem informativa precisa ter o atributo <code>alt</code> preenchido corretamente:
+            </p>
+            <ul>
+              <li><strong>Errado:</strong> <code>alt="foto123.jpg"</code></li>
+              <li><strong>Correto:</strong> <code>alt="Caixa de leite integral 1 litro com etiqueta em Braille"</code></li>
+            </ul>
+
+            <div class="quadro-interativo">
+              <h3>Teste como o Leitor de Tela le uma Imagem</h3>
+              <p>Clique nos botoes abaixo para comparar:</p>
+              <div class="controles-quadro" role="group" aria-label="Alternar exemplo de descricao de imagem">
+                <button type="button" id="botao-com-alt" class="botao-acessibilidade" aria-pressed="true">Com atributo alt</button>
+                <button type="button" id="botao-sem-alt" class="botao-acessibilidade" aria-pressed="false">Sem atributo alt</button>
+              </div>
+              <div class="saida-quadro" role="status">
+                <span class="rotulo-saida">LEITURA DO SISTEMA:</span>
+                <span id="texto-simulador-alt">Imagem: "Embalagem de leite integral 1 litro sem lactose, com etiqueta Braille e validade para 15 de dezembro."</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="caixa-lateral">
+            <h3>Proxima Pagina</h3>
+            <p>Veja na proxima pagina como alertas visuais e Libras auxiliam pessoas surdas no dia a dia.</p>
+            <p><a href="audicao.html" class="botao">Ir para Conexao Auditiva</a></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape-site">
+    <div class="container">
+      <div class="grade-rodape">
+        <div>
+          <h2 id="rodape-titulo" tabindex="-1">TechAssistiva no Cotidiano</h2>
+          <p>
+            Trabalho de Desenvolvimento Web - Site com Acessibilidade baseado nas recomendacoes do eMAG (Modulos 1 e 2).
+          </p>
+        </div>
+
+        <nav aria-label="Mapa do site no rodape">
+          <h2>Paginas do Site</h2>
+          <ul>
+            <li><a href="index.html">1. Inicio</a></li>
+            <li><a href="visao.html" aria-current="page">2. Autonomia Visual</a></li>
+            <li><a href="audicao.html">3. Conexao Auditiva</a></li>
+            <li><a href="esporte-lazer.html">4. Esporte e Lazer</a></li>
+            <li><a href="acessibilidade-contato.html">5. Acessibilidade e Contato</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Atalhos de Teclado (eMAG)</h2>
+          <ul>
+            <li><strong>Alt + 1:</strong> Ir para o conteudo principal</li>
+            <li><strong>Alt + 2:</strong> Ir para o menu de navegacao</li>
+            <li><strong>Alt + 3:</strong> Ir para o rodape</li>
+            <li><strong>Alt + 4:</strong> Alternar modo de Alto Contraste</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rodape-inferior">
+        <span>2026 - TDE 02 Desenvolvimento Web - Site com Acessibilidade</span>
+        <span>Desenvolvido com HTML, CSS e JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script src="js/geral.js" defer></script>
+  <script src="js/visao.js" defer></script>
+</body>
+</html>
